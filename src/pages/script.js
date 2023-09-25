@@ -9,7 +9,7 @@ const pwShowHide = document.querySelectorAll(".pw_hide");
 formOpenBtn.addEventListener("click", () => home.classList.add("show"));
 formCloseBtn.addEventListener("click", () => home.classList.remove("show"));
 
-pwShowHide.forEach(icon => {
+pwShowHide.forEach((icon) => {
   icon.addEventListener("click", () => { 
     let getPwInput = icon.parentElement.querySelector("input");
     if(getPwInput.type === "password"){
@@ -22,6 +22,7 @@ pwShowHide.forEach(icon => {
       icon.classList.replace("uil-eye","uil-eye-slash");
     }
 });
+})
 
 SignupBtn.addEventListener("click", (e) => {
   e.preventDefault();

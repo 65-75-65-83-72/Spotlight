@@ -8,6 +8,11 @@
   font-family: "Montserrat", sans-serif; 
 }
 
+a{
+  text-decoration: none;
+  color : #FACBEA
+}
+
 h1{
   font-size: 50px;
   line-height: 64px;
@@ -46,4 +51,49 @@ p{
 
 body{
   width: 100%;
+}
+
+#header{
+  display : flex;
+  align-items : center;
+  justify-content : space-between;
+  padding : 20px 80px;
+  background : #D988B9;
+  box-shadow : 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+#navbar{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+#navbar li{
+list-style: none;
+padding: 0 20px;
+position: relative;
+}
+
+#navbar li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #B0578D;
+  transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a:active{
+  color: #FFE4D6
+}
+
+#navbar li a.active::after,
+#navbar li a:hover{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #FFE4D6;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+  
 }

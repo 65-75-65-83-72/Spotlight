@@ -4,8 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  font-family: "Montserrat", sans-serif; 
+  font-family: "Poppins", sans-serif, "Montserrat", sans-serif; 
 }
 
 a{
@@ -69,9 +68,9 @@ body{
 }
 
 #navbar li{
-list-style: none;
-padding: 0 20px;
-position: relative;
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
 }
 
 #navbar li a{
@@ -87,7 +86,7 @@ position: relative;
 }
 
 #navbar li a.active::after,
-#navbar li a:hover{
+#navbar li a:hover::after{
   content: "";
   width: 30%;
   height: 2px;

@@ -1,5 +1,5 @@
 *{
-  marigin: 0;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -11,5 +11,16 @@ html,body{
 #main{
   height: 100%;
   width: 100%;
-  background-color:bisque
+  background-color:bisque;
+  position: relative:
+}
+#nav{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-times: center;
+    justify-content: space-between;
+}
+#nav img{
+    height: 50px;
 }

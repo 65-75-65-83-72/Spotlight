@@ -2,7 +2,6 @@
 
 
 :root {
-  --primary-color: #face59;
   --secondary-color: #FFE4D6;
   --text-dark: #fFE4D6;
   --text-light: #6b7280;
@@ -24,7 +23,7 @@
 }
 
 .section__header {
-  font-size: 2.5rem;
+  font-size: 20px;
   font-weight: 600;
   font-family: var(--header-font);
   color: var(--text-dark);
@@ -45,7 +44,7 @@
   color: #FFE4D6;
   background-color: #B0578D;
   border-radius: 8px;
-  box-shadow: #FFE4D6;
+  box-shadow: #B0578D;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -78,6 +77,7 @@ img {
 a {
   text-decoration: none;
   text-align: center;
+
 }
 
 html,
@@ -94,7 +94,7 @@ nav {
   position: fixed;
   width: 100%;
   margin: auto;
-  padding: 1rem;
+  padding: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -105,7 +105,7 @@ nav {
 }
 
 .nav__logo a {
-  font-size: 1.5rem;
+  font-size: 40px;
   font-weight: 600;
   font-family: var(--header-font);
   color: var(--text-dark);
@@ -125,25 +125,45 @@ nav {
   transform: scaleY(0);
   transform-origin: top;
   transition: 0.5s;
-  background-color:#B0578D ;
+  background-color:#B0578D;
 }
+
+.nav__links .link a {
+  color: #FFE4D6;
+}
+
 
 .nav__links.open {
   transform: scaleY(1);
 }
 
 .link a {
-  font-weight: 500;
-  color: var(--text-light);
-  transition: 0.3s;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ff870f;
+  transition: 0.3s ease;
 }
 
-.link a:hover {
-  color: var(--text-dark);
+
+.nav__links li:hover a,
+.nav__links li:active a {
+  color: #FFE4D6;
+}
+
+.nav__links .link a.active::after,
+.nav__links .link a:hover::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: #fFE4D6;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
 }
 
 .nav__links .link a {
-  color: var(--text-dark);
+  color: #FFE4D6;
   opacity: 0;
 }
 
@@ -238,29 +258,6 @@ nav {
   color: var(--text-light);
 }
 
-.portfolio__header {
-  display: grid;
-  gap: 2rem;
-}
-
-.portfolio__header .paragraph {
-  margin-bottom: 1rem;
-  color: var(--text-light);
-}
-
-.portfolio__grid {
-  margin-top: 4rem;
-  display: grid;
-  gap: 1rem;
-}
-
-.portfolio__card img {
-  max-width: 400px;
-  margin-inline: auto;
-  border-radius: 5px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
-}
-
 .client__header {
   display: flex;
   flex-direction: column;
@@ -301,34 +298,6 @@ nav {
 
 .client__card p {
   margin-top: 1rem;
-  color: var(--text-light);
-}
-
-.news__grid {
-  margin-top: 4rem;
-  display: grid;
-  gap: 4rem;
-}
-
-.news__card {
-  display: grid;
-  gap: 1rem;
-}
-
-.news__card img {
-  height: 100%;
-  object-fit: cover;
-}
-
-.news__card h4 {
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--text-dark);
-}
-
-.news__card p {
-  margin-bottom: 1rem;
   color: var(--text-light);
 }
 

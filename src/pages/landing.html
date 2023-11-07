@@ -11,6 +11,7 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
     />
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <link rel="stylesheet" href="landing.css" />
     <title>SPOTLIGHT</title>
   </head>
@@ -20,7 +21,6 @@
       <ul class="nav__links" id="nav-links">
         <li class="link"><a href="#home">Home</a></li>
         <li class="link"><a href="#about">About</a></li>
-        <li class="link"><a href="#portfolio">Portfolio</a></li>
         <li class="link"><a href="#client">Client</a></li>
         <li class="link"><a href="#news">News</a></li>
         <li class="link"><a href="#contact">Contact</a></li>
@@ -36,9 +36,70 @@
           <p>
             Our website serves as a dynamic platform connecting individuals with a diverse array of talents, ranging from hair cutting and salon and spa services to mehndi artists and fashion designers. We bridge the gap between skilled professionals and those in search of their expertise, fostering a seamless and efficient exchange of services. Whether you're seeking a makeover, a unique design, or a touch of glamor, our website is your go-to destination to discover and book the perfect skilled artisan for your needs. Join us to unlock a world of talent and transform your ideas into reality
           </p>
-          <button class="btn">Explore</button>
+          <button class="btn" id="form_open">Explore</button>
         </div>
       </div>
+
+      <section class="home">
+        <div class="form_container">
+          <i class="uil uil-times form_close"></i>
+          
+          <!-- LOGIN -->
+          <div class="form login_form">
+            <form action="#">
+              <h2>Login</h2>
+              <div class="input_box">
+                <input type="email" placeholder="Enter your Email" required />
+                <i class="uil uil-envelope-alt email"></i>
+              </div>
+              <div class="input_box">
+                <input type="password" placeholder="Enter your password" required />
+                <i class="uil uil-lock password"></i>
+                <i class="uil uil-eye-slash pw_hide"></i>
+              </div>
+              <div class="option_field">
+                <span class="checkbox">
+                  <input type="checkbox" id="check">
+                  <label for="check">Remember me</label>
+                </span>
+                <a href="#" class="forgot_pw">Forgot Password?</a>
+              </div>
+              <button class="button">Login Now</button>
+              <div class="Login_signup">Don't have an account? <a href="#" id="signup">Signup</a></div>
+            </form>
+          </div>
+    
+          <!-- SIGNUP -->
+          <div class="form signup_form">
+            <form action="#">
+              <h2>Create your account</h2>
+              <div class="input_box">
+                <input type="email" placeholder="Enter your Email" required />
+                <i class="uil uil-envelope-alt email"></i>
+              </div>
+              <div class="input_box">
+                <input type="password" placeholder="Create password" required />
+                <i class="uil uil-lock password"></i>
+                <i class="uil uil-eye-slash pw_hide"></i>
+              </div>
+              <div class="input_box">
+                <input type="password" placeholder="Confirm password" required />
+                <i class="uil uil-lock password"></i>
+                <i class="uil uil-eye-slash pw_hide"></i>
+              </div>
+              <div class="option_field">
+                <span class="checkbox">
+                  <input type="checkbox" id="signup_check">
+                  <label for="signup_check">Remember me</label>
+                </span>
+                <a href="#" class="forgot_pw">Forgot Password?</a>
+              </div>
+              <button class="button">Sign Up</button>
+              <div class="Login_signup">Already have an account? <a href="#" id="login">Login</a></div>
+            </form>
+          </div>
+        </div>
+      </section>
       <div class="header__image">
         <img src="./images/1.jpg" alt="header" class="img-fluid" style="border-radius: 8px;"/>
         <img src="./images/2.jpg" alt="header" class="img-fluid" style="border-radius: 8px;" />
@@ -48,7 +109,7 @@
     <section class="section__container about__container" id="about">
       <div class="about__header">
         <div class="about__image">
-          <img src="./images/3.jpg" alt="about"  class="img-fluid" style="border-radius: 8px; />
+          <img src="./images/3.jpg" alt="about"  class="img-fluid" style="border-radius: 8px;" />
         </div>
         <div class="about__content">
           <p class="section__subheader">About Us</p>
@@ -93,47 +154,11 @@
         </div>
       </div>
     </section>
-
-    <section class="section__container portfolio__container" id="portfolio">
-      <div class="portfolio__header">
-        <div>
-          <p class="section__subheader">Portfolio</p>
-          <h2 class="section__header">Our Case Studies</h2>
-        </div>
-        <div>
-          <p class="paragraph">
-            Each case study offers a glimpse into our creative process, the
-            challenges we've overcome, and the tangible outcomes we've delivered
-            for our clients.
-          </p>
-          <a href="#" class="btn__link">
-            View All <span><i class="ri-arrow-right-line"></i></span>
-          </a>
-        </div>
-      </div>
-      <div class="portfolio__grid">
-        <div class="portfolio__card">
-          <img src="assets/portfolio-1.jpg" alt="portfolio" />
-        </div>
-        <div class="portfolio__card">
-          <img src="assets/portfolio-2.jpg" alt="portfolio" />
-        </div>
-        <div class="portfolio__card">
-          <img src="assets/portfolio-3.jpg" alt="portfolio" />
-        </div>
-      </div>
-    </section>
-
     <section class="section__container client__container" id="client">
       <div class="client__header">
         <div>
           <p class="section__subheader">Testimony</p>
           <h2 class="section__header">What Our Client Says</h2>
-        </div>
-        <div>
-          <a href="#" class="btn__link">
-            View All <span><i class="ri-arrow-right-line"></i></span>
-          </a>
         </div>
       </div>
       <!-- Slider main container -->
@@ -145,7 +170,7 @@
             <div class="client__card">
               <img src="assets/profile-pic-1.jpg" alt="client" />
               <div>
-                <h4>Andress Mount</h4>
+                <h4>Aaryan Pradeep</h4>
                 <div class="client__ratings">
                   <span><i class="ri-star-fill"></i></span>
                   <span><i class="ri-star-fill"></i></span>
@@ -155,7 +180,7 @@
                 </div>
                 <p>
                   I was hesitant about the value of digital marketing for my
-                  local business, but PixelPulse proved me wrong. They boosted
+                  local business(saloon), but SPOTLIGHT proved me wrong. They boosted
                   our local search visibility, and now we're attracting more
                   customers than ever.
                 </p>
@@ -166,7 +191,7 @@
             <div class="client__card">
               <img src="assets/profile-pic-2.jpg" alt="client" />
               <div>
-                <h4>Sarah Anderson</h4>
+                <h4>Swasthika sahana</h4>
                 <div class="client__ratings">
                   <span><i class="ri-star-fill"></i></span>
                   <span><i class="ri-star-fill"></i></span>
@@ -175,7 +200,7 @@
                   <span><i class="ri-star-line"></i></span>
                 </div>
                 <p>
-                  Working with PixelPulse was a game-changer for our business.
+                  Working with SPOTLIGHT was a game-changer for my business(SPA).
                   Their team designed a stunning website and devised a strategic
                   digital marketing plan that significantly increased our online
                   presence.
@@ -187,7 +212,7 @@
             <div class="client__card">
               <img src="assets/profile-pic-3.jpg" alt="client" />
               <div>
-                <h4>John Roberts</h4>
+                <h4>Jerome Reason</h4>
                 <div class="client__ratings">
                   <span><i class="ri-star-fill"></i></span>
                   <span><i class="ri-star-fill"></i></span>
@@ -196,10 +221,10 @@
                   <span><i class="ri-star-fill"></i></span>
                 </div>
                 <p>
-                  As a startup founder, I needed a digital partner I could trust
-                  to bring my vision to life. PixelPulse did just that. They
-                  built a user-friendly app that perfectly aligned with our
-                  brand.
+                  As a Fashion designer, I needed a digital partner I could trust
+                  to bring my vision to life. SPOTLIGHT did just that. They
+                  built a user-friendly website that perfectly aligned with my vision
+                  and people's need!
                 </p>
               </div>
             </div>
@@ -208,7 +233,7 @@
             <div class="client__card">
               <img src="assets/profile-pic-4.jpg" alt="client" />
               <div>
-                <h4>David Ramirez</h4>
+                <h4>Dan</h4>
                 <div class="client__ratings">
                   <span><i class="ri-star-fill"></i></span>
                   <span><i class="ri-star-fill"></i></span>
@@ -217,10 +242,10 @@
                   <span><i class="ri-star-half-fill"></i></span>
                 </div>
                 <p>
-                  PixelPulse went above and beyond in helping our nonprofit
-                  organization establish a strong online presence. They designed
+                  SPOTLIGHT went above and beyond in helping my sister's ability(mehndi artist) to
+                  establish a strong online presence. They designed
                   a beautiful website and helped us set up effective online
-                  fundraising campaigns.
+                  presence.
                 </p>
               </div>
             </div>
@@ -242,9 +267,6 @@
               user-centered web designs that prioritize the needs and
               preferences of your target audience.
             </p>
-            <a href="#" class="btn__link">
-              View All <span><i class="ri-arrow-right-line"></i></span>
-            </a>
           </div>
         </div>
         <div class="news__card">
@@ -255,9 +277,6 @@
               Discover why mobile optimization is crucial, explore best
               practices, and understand how to create responsive designs.
             </p>
-            <a href="#" class="btn__link">
-              View All <span><i class="ri-arrow-right-line"></i></span>
-            </a>
           </div>
         </div>
         <div class="news__card">
@@ -268,9 +287,6 @@
               Uncover the secrets of effective digital marketing strategies that
               can elevate your online presence.
             </p>
-            <a href="#" class="btn__link">
-              View All <span><i class="ri-arrow-right-line"></i></span>
-            </a>
           </div>
         </div>
       </div>
@@ -279,11 +295,8 @@
     <section class="contact" id="contact">
       <div class="section__container contact__container">
         <h2 class="section__header">
-          Would Like To Start Your Project With Us
+          Explore, Discover, and Grow with Us Online
         </h2>
-        <div class="contact__btn">
-          <button class="btn">Get In Touch</button>
-        </div>
       </div>
     </section>
 
@@ -300,8 +313,8 @@
       <div class="footer__col">
         <h4>About Us</h4>
         <p>
-          Whether you're a startup looking to make your mark or an established
-          brand seeking a digital facelift, PixelPulse is your dedicated partner
+          Whether you're a startup looking to make your mark or a talanted , skillful
+          individual seeking a digital facelift , SPOTLIGHT is your dedicated partner
           in navigating the digital realm.
         </p>
       </div>

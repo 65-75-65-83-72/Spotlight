@@ -42,15 +42,15 @@
   font-size: 1rem;
   white-space: nowrap;
   color: var(--text-dark);
-  background-color: var(--primary-color);
-  border-radius: 2px;
+  background-color:#E48586 ;
+  border-radius: 10px;
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   transition: 0.3s;
 }
 
 .btn:hover {
-  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 5px 10px rgba(244, 244, 244, 0.3);
 }
 
 .btn__link {
@@ -69,6 +69,150 @@
   transform: translateX(10px);
 }
 
+.form_container {
+  position: absolute;
+  max-width: 320px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  z-index: 101;
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px rgb(255, 255, 253);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease-out;
+}
+
+.home.show .form_container {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.signup_form {
+  display: none;
+}
+.form_container.active .signup_form{
+  display: block;
+}
+.form_container.active .login_form{
+  display: none;
+}
+
+
+.form_close {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.form_container h2 {
+  font-size: 35px;
+  color: #0b0217;
+  text-align: center;
+}
+
+.input_box {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  height: 40px;
+}
+
+.input_box input[type=email],
+.input_box input[type=password] {
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #aaaaaa;
+  padding: 0 30px;
+  background: none;
+  box-shadow: none;
+}
+
+.input_box input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 0 30px;
+  border-bottom: 1px solid #aaaaaa;
+}
+
+.input_box i {
+  position: absolute;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 18px;
+  color: #707070;
+}
+
+.input_box i.email,
+.input_box i.password {
+  left: 0;
+}
+
+.input_box input:focus ~ i.email,
+.input_box input:focus ~ i.password {
+  color: #7d2ae8;
+}
+
+.input_box i.pw_hide {
+  right: 0;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.form_container a {
+  color: #7d2ae8;
+  font-size: 14px;
+}
+
+.form_container a:hover {
+  text-decoration: underline;
+}
+
+.option_field {
+  margin-top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkbox {
+  display: flex;
+  column-gap: 8px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.checkbox label {
+  font-size: 12px;
+  user-select: none;
+  cursor: pointer;
+  color: #0b0217;
+}
+
+.form_container .button {
+  background: #b981fe;
+  margin-top: 30px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.Login_signup {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 15px;
+}
+
 img {
   display: flex;
   width: 100%;
@@ -85,6 +229,7 @@ body {
 
 body {
   font-family: "Poppins", sans-serif;
+  background-color: #FDE5EC;
 }
 
 nav {
@@ -97,9 +242,9 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
-  background-color: var(--white);
   z-index: 99;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  background-color: #916DB3;
 }
 
 .nav__logo a {
@@ -123,7 +268,7 @@ nav {
   transform: scaleY(0);
   transform-origin: top;
   transition: 0.5s;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: #916DB3;
 }
 
 .nav__links.open {
@@ -221,7 +366,7 @@ nav {
   padding: 8px 15px;
   font-size: 1.75rem;
   color: var(--text-dark);
-  background-color: var(--secondary-color);
+  background-color: #FDE5EC;
   border-radius: 100%;
 }
 
@@ -234,29 +379,6 @@ nav {
 
 .about__card p {
   color: var(--text-light);
-}
-
-.portfolio__header {
-  display: grid;
-  gap: 2rem;
-}
-
-.portfolio__header .paragraph {
-  margin-bottom: 1rem;
-  color: var(--text-light);
-}
-
-.portfolio__grid {
-  margin-top: 4rem;
-  display: grid;
-  gap: 1rem;
-}
-
-.portfolio__card img {
-  max-width: 400px;
-  margin-inline: auto;
-  border-radius: 5px;
-  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .client__header {
@@ -279,7 +401,8 @@ nav {
   display: flex;
   align-items: flex-start;
   gap: 1rem;
-  background-color: var(--secondary-color);
+  background-color: #FCBAAD;
+  border-radius: 20px;
 }
 
 .client__card img {
@@ -294,7 +417,7 @@ nav {
 }
 
 .client__ratings {
-  color: goldenrod;
+  color: #b981fe;
 }
 
 .client__card p {
@@ -369,6 +492,7 @@ nav {
 .footer__col p {
   margin-bottom: 1rem;
   color: var(--text-light);
+  justify-content: justify;
 }
 
 .footer__col form {
@@ -385,13 +509,14 @@ nav {
   outline: none;
   border: none;
   font-size: 1rem;
+  background-color: #FDE5EC;
 }
 
 .footer__col button {
   outline: none;
   border: none;
   font-size: 1.25rem;
-  color: var(--primary-color);
+  color: #E48586;
   background-color: transparent;
   cursor: pointer;
 }
@@ -490,15 +615,6 @@ nav {
   .about__grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-  }
-
-  .portfolio__header {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-  }
-
-  .portfolio__grid {
-    grid-template-columns: repeat(3, 1fr);
   }
 
   .client__header {

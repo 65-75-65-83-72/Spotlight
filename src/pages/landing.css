@@ -492,7 +492,7 @@ nav {
 .footer__col p {
   margin-bottom: 1rem;
   color: var(--text-light);
-  justify-content: justify;
+  justify-content: justifygit;
 }
 
 .footer__col form {

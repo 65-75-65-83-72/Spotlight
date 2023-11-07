@@ -326,7 +326,7 @@ nav {
 }
 
 .header__image img {
-  height: 50%;
+  height: 150%;
   object-fit: cover;
 }
 
